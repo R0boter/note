@@ -1,4 +1,6 @@
+- [简介](README.md)
 - [前端语言](Web/README.md)
+
   - [HTML 基础知识](Web/HTML-Basis.md)
   - [HTML 常用标签](Web/HTML-Element.md)
   - [CSS 基础知识](Web/CSS-Base.md)
@@ -10,7 +12,7 @@
   - [JQuery](Web/jQuery.md)
   - [NodeJS](Web/NodeJS.md)
 
-* [Python](Python/README.md)
+- [Python](Python/README.md)
   - [Python 基础知识](Python/01_PythonBasic.md)
   - [Python 操作符和数据类型](Python/02_Oprators-Expressions-DataTypes.md)
   - [Python 流程控制](Python/03_ConditionalControl.md)
@@ -18,7 +20,7 @@
   - [Python 内置函数](Python/05_PythonBuild-InFunction.md)
   - [Python 常用函数](Python/06_CommonFunction.md)
   - [Python 第三方模块](Python/07_ModuleList.md)
-* [MySQL](MySQL/README.md)
+- [MySQL](MySQL/README.md)
   - [MySQL 基础知识](MySQL/01_DatabaseBasic.md)
   - [数据库查询语言](MySQL/02_DQL.md)
   - [数据库定义语言](MySQL/03_DDL.md)
