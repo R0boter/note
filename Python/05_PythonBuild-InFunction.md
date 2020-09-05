@@ -1,4 +1,4 @@
-# python 内建函数
+
 
 ## range([start,]end[,step])
 

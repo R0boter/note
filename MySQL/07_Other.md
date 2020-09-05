@@ -1,6 +1,4 @@
-# djdfgsasdfasdf
 
-数据库补充
 
 ## 变量
 

@@ -1,4 +1,3 @@
-# python基础
 
 ## Python简介
 

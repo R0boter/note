@@ -1,5 +1,3 @@
-# CSS 属性
-
 ## 字体属性
 
 像素（Pixel）是指构成图片的小色点，分辨率（单位：DPI）是指每英寸（lnch）上的像素数量，可以看作是像素的分布密度；像素相同时，分辨率越高则像素密度越大，图像越清晰
@@ -269,24 +267,24 @@ div{
 ## 伪对象
 
 ```css
-div{
-    width:400px;
-    height:400px;
-    background:#00FF00;
+div {
+  width: 400px;
+  height: 400px;
+  background: #00ff00;
 }
-div::before{
-    /* 伪对象：在指定元素的内部的前面添加 */
-    content:"开头";
-    display:block;
-    background:#FF0000;
-    font-weigh:bold;
-    text-align:center;
+div::before {
+  /* 伪对象：在指定元素的内部的前面添加 */
+  content: "开头";
+  display: block;
+  background: #ff0000;
+  font-weigh: bold;
+  text-align: center;
 }
-div::after{
-    /* 伪对象：在指定的元素的内部的后面 */
-    content:"结尾";
+div::after {
+  /* 伪对象：在指定的元素的内部的后面 */
+  content: "结尾";
 
-/*
+  /*
 注意：
     1. 伪对象不是一个实际标签，是css样式模拟的一个标签
     2. 伪元素必须有 content 属性
@@ -307,28 +305,28 @@ div::after{
 5. 浮动后的元素，都变为行内块
 6. 浮动的元素脱离了标准流
 */
-.box1{
-    width:100px;
-    height:100px;
-    background:#FF0000;
-    /* 向左浮动 */
-    folat:left;
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: #ff0000;
+  /* 向左浮动 */
+  folat: left;
 }
-.box2{
-    width:200px;
-    height:200px;
-    background:#00FF00;
-    /* 向右浮动 */
-    folat:right;
+.box2 {
+  width: 200px;
+  height: 200px;
+  background: #00ff00;
+  /* 向右浮动 */
+  folat: right;
 }
-.box3{
-    width:300px;
-    height:300px;
-    background:#0000FF;
-    /* 取消浮动 */
-    folat:none;
+.box3 {
+  width: 300px;
+  height: 300px;
+  background: #0000ff;
+  /* 取消浮动 */
+  folat: none;
 
-    /*
+  /*
     1. 浮动最开始用于图文绕排
     2. 现在最多用于将多个块元素排成一行
     3. 加了浮动后元素的顺序，以标签编写顺序，而且要朝同一方向
@@ -391,9 +389,9 @@ div::after{
 2. 在父元素后设定空标签清除浮动
 
    ```css
-   .clear{
-       /* 必须先在网页中要清除浮动的元素的下面添加一个空的块元素，专门用于清除浮动 */
-       clear:both;
+   .clear {
+     /* 必须先在网页中要清除浮动的元素的下面添加一个空的块元素，专门用于清除浮动 */
+     clear: both;
    }
    ```
 
@@ -402,39 +400,39 @@ div::after{
 4. 利用伪对象添加空标签来清除浮动
 
    ```css
-   div::after{
-       content:"";
-       height:0px;
-       clear:both;
-       overflow:hidden;
-       display:block;
+   div::after {
+     content: "";
+     height: 0px;
+     clear: both;
+     overflow: hidden;
+     display: block;
    }
    ```
 
 ## 阴影
 
-   ```css
-   div{
-       width:100px;
-       height:100px;
-       /* 文本阴影：text-shadow:横向偏移 纵向偏移 模糊距离 颜色,...;
-       一个文字可以有多个阴影，用逗号隔开
-       */
-       text-shadow:5px -5px 2px #999;
+```css
+div {
+  width: 100px;
+  height: 100px;
+  /* 文本阴影：text-shadow:横向偏移 纵向偏移 模糊距离 颜色,...;
+    一个文字可以有多个阴影，用逗号隔开
+    */
+  text-shadow: 5px -5px 2px #999;
 
-       /* 盒子阴影：box-shadow:水平偏移 垂直偏移 模糊距离 阴影尺寸 颜色 */
-       box-shadow:8px -3px 10px 10px #F00;
-   }
-   ```
+  /* 盒子阴影：box-shadow:水平偏移 垂直偏移 模糊距离 阴影尺寸 颜色 */
+  box-shadow: 8px -3px 10px 10px #f00;
+}
+```
 
 ## 细线表格
 
 表格间的边框实际上是重叠在一起的，使用细线表格可以优化表格间的边框
 
 ```css
-table{
-    /* 细线表格 */
-    border-collapse:collapse;
+table {
+  /* 细线表格 */
+  border-collapse: collapse;
 }
 ```
 
@@ -457,15 +455,15 @@ table{
 语法：`position:relative`
 
 ```css
-div{
-    width:200px;
-    height:200px;
-    background:#00FF00;
-    /* 设置相对定位 */
-    position:relative;
-    top:50px;
-    left:100px;
-    /*
+div {
+  width: 200px;
+  height: 200px;
+  background: #00ff00;
+  /* 设置相对定位 */
+  position: relative;
+  top: 50px;
+  left: 100px;
+  /*
     1. 参考自身在标准流中的位置进行偏移
     2. 可以覆盖别的元素
     3. 偏移后，原本的位置还是占用空间
@@ -479,15 +477,15 @@ div{
 语法：`position:absolute;`
 
 ```css
-.box{
-    width:200px;
-    height:200px;
-    background:#FF0000;
-    /* 设置绝对定位 */
-    position:absolute;
-    top:50px;
-    left:100px;
-    /*
+.box {
+  width: 200px;
+  height: 200px;
+  background: #ff0000;
+  /* 设置绝对定位 */
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  /*
     1. 偏移位置参考设置过定位（相对|绝对|固定）的直系父元素或直系祖宗元素，没找到就一直往上找，直到 html
     2. 绝对定位脱离了标准流，不继承父级宽度（无论是块元素还是行元素，盒子大小取决于其中的内容），可以自定义宽高，不占用标准流空间，会覆盖文字
     3. margin:auto; 对设置过绝对定位的元素不起作用
@@ -502,19 +500,19 @@ div{
 语法：`pasition:fixed;`
 
 ```css
-.box{
-    width:3000px;
-    height:200px;
-    background:#abcdef;
-    /* 设置固定定位：相对于浏览器窗口 */
-    pasidion:fixed;
-    /* 让盒子在父元素中居中 */
-    left:50%;
-    top:50%;
-    margin-left:-150px;
-    margin-top:-100px;
+.box {
+  width: 3000px;
+  height: 200px;
+  background: #abcdef;
+  /* 设置固定定位：相对于浏览器窗口 */
+  pasidion: fixed;
+  /* 让盒子在父元素中居中 */
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
 
-    /*
+  /*
     1. 固定定位时以浏览器作为参考进行偏移的，且滚动条对固定定位无效
     2. 会脱离标准流，不占据标准流空间
     3. margin:auto; 对固定定位无效
@@ -546,42 +544,42 @@ div{
 语法：`box-sizing:border-box;`
 
 ```css
-.box{
-    width:200px;
-    height:200px;
-    background:#FF0000;
-    padding:50px;
-    border: 40px solid yellow;
-    /* 内减模式，消除padding和边框问题 */
-    box-sizing:border-box;
+.box {
+  width: 200px;
+  height: 200px;
+  background: #ff0000;
+  padding: 50px;
+  border: 40px solid yellow;
+  /* 内减模式，消除padding和边框问题 */
+  box-sizing: border-box;
 }
 ```
 
 ### 新增的属性选择器
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>页面的标题</title>
-        <style>
-            /* 指定以a开头的属性名的标签 */
-            [name^="a"]{
-                color:red;
-            }
-            /* 指定以u结尾的属性名的标签 */
-            [name$="u"]{
-                color:blue;
-            }
-        </style>
-    </head>
-    <body>
-        <input type="text" name="name kj ufknu">
-        <input type="text" name="user">
-        <input type="text" name="adsfiu">
-        <input type="text" name="adb">
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>页面的标题</title>
+    <style>
+      /* 指定以a开头的属性名的标签 */
+      [name^="a"] {
+        color: red;
+      }
+      /* 指定以u结尾的属性名的标签 */
+      [name$="u"] {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="name kj ufknu" />
+    <input type="text" name="user" />
+    <input type="text" name="adsfiu" />
+    <input type="text" name="adb" />
+  </body>
 </html>
 ```
 
@@ -600,7 +598,7 @@ div{
 | `:nth-child(even)` |       找出父元素中奇数的子元素       |
 | `:nth-child(odd)`  |     代表找出父元素中偶数的子元素     |
 |      `:empty`      | 代表找出父元素中子元素内容为空的标签 |
-| `:nth-of-type(n)`  |        找出指定标签中的第n个         |
+| `:nth-of-type(n)`  |       找出指定标签中的第 n 个        |
 |  `:first-of-type`  |        找出指定标签中的第一个        |
 |  `:last-of-type`   |       找出指定标签中的最后一个       |
 |   `:only-child`    |  找出指定标签是父标签中的唯一子元素  |
@@ -610,35 +608,35 @@ div{
 可以设置移动、旋转、大小
 
 ```css
-.box{
-    width:500px;
-    height:500px;
-    background:red;
+.box {
+  width: 500px;
+  height: 500px;
+  background: red;
 }
-.s1{
-    width:100px;
-    height:100px;
-    background:blue;
+.s1 {
+  width: 100px;
+  height: 100px;
+  background: blue;
 }
-.box:hover .s1{
-    /* 当鼠标移动到.box上时，.s1横向移动200px，垂直移动100px */
-    transform:translate(200px,100px);
+.box:hover .s1 {
+  /* 当鼠标移动到.box上时，.s1横向移动200px，垂直移动100px */
+  transform: translate(200px, 100px);
 
-    /* 当鼠标移动到.box上时，.s1顺时针旋转135度 */
-    tranfrom:rotate(135deg);
+  /* 当鼠标移动到.box上时，.s1顺时针旋转135度 */
+  tranfrom: rotate(135deg);
 
-    /* 当鼠标移动到.box上时，.s1放大2倍。放大使用正整数，缩小使用小数 */
-    transfrom:scale(2);
-    /* 当鼠标移动到.box上时，.s1宽度放大2倍，高度放大3倍 */
-    transfrom:scale(2,3);
-    /* 三个属性可以写在同一个里面，用空格隔开 */
-    transfrom:rotate(360deg) scale(2);
+  /* 当鼠标移动到.box上时，.s1放大2倍。放大使用正整数，缩小使用小数 */
+  transfrom: scale(2);
+  /* 当鼠标移动到.box上时，.s1宽度放大2倍，高度放大3倍 */
+  transfrom: scale(2, 3);
+  /* 三个属性可以写在同一个里面，用空格隔开 */
+  transfrom: rotate(360deg) scale(2);
 
-    /* 当鼠标移动到.box上时，.s1绕x轴旋转45度（斜切）
+  /* 当鼠标移动到.box上时，.s1绕x轴旋转45度（斜切）
     第一个值表示绕 x 轴旋转，第二个值表示绕 y 轴旋转
     此属性的放大缩小是以中心进行放大缩小
     */
-    transfrom:skew(45deg,0);
+  transfrom: skew(45deg, 0);
 }
 ```
 
@@ -717,16 +715,16 @@ img:hover{
 当行内文字溢出时，使用省略号形式显示
 
 ```css
-.box{
-    width:300px;
-    height:100px;
-    /* 超出部分隐藏 */
-    overflow:hidden;
-    /* 设置文本不换行 */
-    white-space:nowrap;
-    /* 超出文本用省略号代替 */
-    text-over-flow:ellipsis;
-    /* 必须三条属性都存在，才会生效 */
+.box {
+  width: 300px;
+  height: 100px;
+  /* 超出部分隐藏 */
+  overflow: hidden;
+  /* 设置文本不换行 */
+  white-space: nowrap;
+  /* 超出文本用省略号代替 */
+  text-over-flow: ellipsis;
+  /* 必须三条属性都存在，才会生效 */
 }
 ```
 
@@ -758,33 +756,33 @@ img:hover{
 ## 弹性布局
 
 ```css
-.box{
-    width:300px;
-    height:300px;
-    border:1px solid #000;
-    /* 设置弹性容器
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
+  /* 设置弹性容器
     必须设置此项，表示此元素作为一个弹性容器。弹性容器类似于浮动布局，但并未脱离文档流
     */
-    display:flex;
-    /* 设置弹性布局的排列方式，此选项在父元素中设置，但是对此元素中的子元素起作用
+  display: flex;
+  /* 设置弹性布局的排列方式，此选项在父元素中设置，但是对此元素中的子元素起作用
     row：类似浮动布局的左对齐(默认)
     row-reverse：类似浮动布局的右对齐，但第一位在最右边
     column：垂直排列
     column-reverse：逆向垂直排列
     */
-    flex-direction:row;
-    /* 设置弹性布局是否换行
+  flex-direction: row;
+  /* 设置弹性布局是否换行
     wrap：换行显示
     nowrap：不换行显示（默认）
     wrap-reverse：反转换行显示。会从最下面从左至右排列，填满后换行
     */
-    flex-wrap:wrap;
+  flex-wrap: wrap;
 }
-.box div{
-    width:100px;
-    height:100px;
-    background:#00F;
-    border:2px solid #FFF;
+.box div {
+  width: 100px;
+  height: 100px;
+  background: #00f;
+  border: 2px solid #fff;
 }
 ```
 
@@ -793,67 +791,66 @@ img:hover{
 #### 水平对齐
 
 ```css
-.box{
-    width:400px;
-    height:400px;
-    border: 1px solid #0f0;
-    display:flex;
-    /*  */
-    justify-content:
+.box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #0f0;
+  display: flex;
+  /*  */
+  justify-content: ;
 }
-.box div{
-    width:100px;
-    height:100px;
-    background:#00F;
+.box div {
+  width: 100px;
+  height: 100px;
+  background: #00f;
 }
 ```
 
 #### 垂直对齐
 
 ```css
-.box{
-    width:400px;
-    height:400px;
-    border: 1px solid #0f0;
-    /*  */
-    align-content:
+.box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #0f0;
+  /*  */
+  align-content: ;
 }
-.box div{
-    width:100px;
-    height:100px;
-    background:#00F;
+.box div {
+  width: 100px;
+  height: 100px;
+  background: #00f;
 }
 ```
 
 #### 交叉对齐
 
 ```css
-.box{
-    width:400px;
-    height:400px;
-    border: 1px solid #0f0;
-    /*  */
-
+.box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #0f0;
+  /*  */
 }
-.box div{
-    width:100px;
-    height:100px;
-    background:#00F;
+.box div {
+  width: 100px;
+  height: 100px;
+  background: #00f;
 }
 ```
 
 #### 子元素自己在 Y 轴对齐
 
 ```css
-.box{
-    width:400px;
-    height:400px;
-    border: 1px solid #0f0;
-    /*  */
+.box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #0f0;
+  /*  */
 }
-.box div{
-    width:100px;
-    height:100px;
-    background:#00F;
+.box div {
+  width: 100px;
+  height: 100px;
+  background: #00f;
 }
 ```
