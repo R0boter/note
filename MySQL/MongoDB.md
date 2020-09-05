@@ -1,5 +1,3 @@
-# MongoDB 基础
-
 ## NoSQL
 
 Not Only SQL：非关系型数据库，是对不同于传统的关系型数据库的数据库管理系统的统称
@@ -44,14 +42,14 @@ BASE(Basically Available,Soft-state,Eventually Consistent)是 NoSQL 数据库通
 - Eventually Consistent：最终一致性，也是关系型数据库 ACID 原则的最终目的
 
 NoSQL 数据库分类
-|      类型      |                      部分代表                       |                                                       特点                                                       |
+| 类型 | 部分代表 | 特点 |
 | :------------: | :-------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
-|     列存储     |            Hbase、Cassandra、Hypertable             | 按列存储数据，最大特点是方便存储结构化和半结构化数据，方便数据压缩，对针对某一列或某几列的查询有非常大的 IO 优势 |
-|    文档存储    |                  MongoDB、CouchDB                   |  文档存储一般用类似 json 的格式存储，存储的内容是文档型。这样可以对某些字段建立索引，实现关系型数据库的某些功能  |
-| Key-value 存储 | Tokyo Cabinet/Tyrant Berkeley DB、MemcacheDB、Redis |     可以通过 key 快速查询到对应的 value，一般来说，存储不管 value 格式，照单全收。（Redis 包含了其他的功能）     |
-|     图存储     |                   Neo4J、FlockDB                    |                   图形关系的最佳存储，使用传统关系数据库来解决的话性能低下，而且设计使用不方便                   |
-|    对象存储    |                    db4o、Versant                    |                           通过类似面向对象语言的语法操作数据库，通过对象的方式存取数据                           |
-|   xml 数据库   |               Berkeley DB XML、BaseX                |                      高效的存储 XML 数据，并支持 XML 的内部查询语法，比如 XQuery、Xpath 等                       |
+| 列存储 | Hbase、Cassandra、Hypertable | 按列存储数据，最大特点是方便存储结构化和半结构化数据，方便数据压缩，对针对某一列或某几列的查询有非常大的 IO 优势 |
+| 文档存储 | MongoDB、CouchDB | 文档存储一般用类似 json 的格式存储，存储的内容是文档型。这样可以对某些字段建立索引，实现关系型数据库的某些功能 |
+| Key-value 存储 | Tokyo Cabinet/Tyrant Berkeley DB、MemcacheDB、Redis | 可以通过 key 快速查询到对应的 value，一般来说，存储不管 value 格式，照单全收。（Redis 包含了其他的功能） |
+| 图存储 | Neo4J、FlockDB | 图形关系的最佳存储，使用传统关系数据库来解决的话性能低下，而且设计使用不方便 |
+| 对象存储 | db4o、Versant | 通过类似面向对象语言的语法操作数据库，通过对象的方式存取数据 |
+| xml 数据库 | Berkeley DB XML、BaseX | 高效的存储 XML 数据，并支持 XML 的内部查询语法，比如 XQuery、Xpath 等 |
 
 ## MongoDB 简介
 
