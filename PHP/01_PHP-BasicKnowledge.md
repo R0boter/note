@@ -35,6 +35,8 @@ $$name = "lily";
 echo $leon;
 // $leon 的值是 lily，双 $ 符定义的是可变变量，变量名是单 $ 符的值
 
+ObjectName
+
 // 静态变量
 <?php
 function make()
@@ -69,9 +71,9 @@ function show()
 
 function showOne()
 {
-    /** 
+    /**
      * 使用php自带的全局变量方法获取
-     * 单独打印 print_r($GLOBALS) 会打印出php自带的所有全局变量，也可以使用此变量来将普通变	 * 量变为全局变量 
+     * 单独打印 print_r($GLOBALS) 会打印出php自带的所有全局变量，也可以使用此变量来将普通变	 * 量变为全局变量
      */
     echo $GLOBALS['name']
 }
@@ -115,7 +117,7 @@ $a = 3;
 
 1. `string`：字符串
 2. `integer`：整型
-3. `float`：浮点型 
+3. `float`：浮点型
 4. `array`：数组
 5. `object`：对象
 6. `boolean`：布尔类型
@@ -133,38 +135,9 @@ $a = 3;
 
 ```php
 <?php
-$name = 'leon';
+$naje = 'leon';
 echo "my name is {$name}";
 // 转义字符
 echo "定义变量的方法：\$string = 10\;";
 ?>
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
