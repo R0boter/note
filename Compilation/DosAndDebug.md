@@ -6,7 +6,7 @@ Debug是DOS、Windows都提供的实模式(8086方式)程序的调试工具，�
 
 准备工具：
 
-1. MS-DOS7.1.ISO或者msdos71f.zip(解压出来的有两个软盘文件，后缀为1的时系统镜像，后缀为2的时附加插件)
+1. MS-DOS7.1.ISO或者msdos71f.zip(解压出来的有两个软盘文件，后缀为1的是系统镜像，后缀为2的是附加插件)
 2. MASM5.0.zip(编译器和链接器)
 3. vim71d16.zip和vim71rt.zip
 4. csdpmi4b.zip
