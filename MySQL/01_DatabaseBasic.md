@@ -34,6 +34,13 @@
 
 ## 关于MySQL的一点基础知识
 
+* 新版MySQL安装后需要初始化
+  
+  1. 初始化命令： `sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql`
+  2. 注意初始化后的输出会显示默认生成的登陆密码
+  3. 登陆命令: `mysql -uroot -p`
+  4. 修改默认密码： `ALTER USER 'root'@'localhost' identified by '123456'`
+
 * MySQL有两种版本：企业版(收费)、社区版(免费)
 
 * 在MySQL中字符集为utf8,而不是utf-8
